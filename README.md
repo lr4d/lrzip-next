@@ -1,7 +1,11 @@
 lrzip-next - Long Range ZIP
 ======================
 
-v 0.7.99
+## NEW v0.8.0
+* NEW Magic Header. 18 bytes v 24 bytes
+* Backward compatible for reading files EXCEPT encrypted files
+* SCRYPT Key derivation breaks ability to decrypt old encrypted archives
+* Code cleanups, especially wrt reading magic header
 
 ## This is a development branch. Not for production use!
 
@@ -31,13 +35,13 @@ Many new changes, not in the main branch, including:
 (See original README for more historical info)
 
 ### Download and Build
-`$ git clone -b lzma-sdk-21.02 https://github.com/pete4abw/lrzip-next`\
+`$ git clone -b 21.02dev https://github.com/pete4abw/lrzip-next`\
 or if you desire to also download the **lrzip-fe** front end\
-`$ git clone -b lzma-sdk-21.02 --recurse-submodules https://github.com/pete4abw/lrzip-next`
+`$ git clone -b 21.02dev --recurse-submodules https://github.com/pete4abw/lrzip-next`
 
 If you forget use --recurse-submodules and want to download lrzip-fe separately, use these commands:
 ```
-$ git clone -b lzma-sdk-21.02 https://github.com/pete4abw/lrzip-next
+$ git clone -b 21.02dev https://github.com/pete4abw/lrzip-next
 $ cd lrzip-next
 $ git submodule update --init (to download lrzip-fe)
 ```
